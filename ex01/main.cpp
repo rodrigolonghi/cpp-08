@@ -1,6 +1,7 @@
 #include "Span.hpp"
 
 int main() {
+	Span 	sp = Span(5);
 	Span	shortSpan(5);
 	Span	errorSpan(100);
 	Span	regularSpan(10000);
@@ -32,4 +33,14 @@ int main() {
 	} catch (std::exception &e) {
 		std::cout << e.what();
 	}
+
+	std::cout << "\e[1;32m\nSubject tests:\e[0m\n";
+	sp.addNumber(6);
+	sp.addNumber(3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+	return 0;
 }
