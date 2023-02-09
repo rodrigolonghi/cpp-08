@@ -25,7 +25,7 @@ unsigned int	Span::shortestSpan() const {
 	if (this->content.size() < 2)
 		throw FewElementsException();
 
-	unsigned int distance = std::numeric_limits<int>::max();
+	unsigned int distance = INT_MAX;
 	for (unsigned int i = 0; i < this->content.size(); i++) {
 		for (unsigned int j = i + 1; j < this->content.size(); j++) {
 			if((unsigned int)std::abs(this->content[i] - this->content[j]) < distance)
